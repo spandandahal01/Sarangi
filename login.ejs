@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Now</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <section class="logo-main-container">
+        <div class="main-login-container">
+            <div class="left-login-content">
+                <img src="assets/images/logodhun.png" alt="">
+                <h2>Welcome Back</h2>
+                <p>Please enter your contact details to connect.</p>
+                <p style="color: aliceblue;"><%= message%></p>
+                <form action="/login", method="post">
+                    <label for="email" >Email Address:</label>
+                    <input type="email" id="email" name="email" required class="mb-25" style="color: white; font-weight: 500;">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required style="color: white;">
+                    <div class="forgot-pass-flex mt-25 mb-25" style="align-items: center;">
+                        <!-- <div class="rememberme-box" style="display: flex; align-items: center;">
+                            <input type="checkbox" style="width: 20px;" id="rememberMe" name="rememberMe">
+                            <label for="rememberMe">Remember Me</label>
+                        </div> -->
+                        <a href="/forget-password">Forgot Passoword</a>
+                    </div>
+                    <div class="flex-btn-login">
+                        <button type="submit" class="login-without-logo">Log In</button>
+                        <!-- <a href="http://localhost:8000/auth/google" class="login-with-logo"><img src="assets/images/google.svg" alt=""> Log in with Google</a> -->
+                    </div>
+                </form>
+                
+                <div class="dont-have-accnt">
+                    <h3>Don't have an account?</h3><a href="/listener-signup">Sign Up here</a>
+                </div>
+            </div>
+            <div class="right-login-content">
+                <img src="assets/images/login-logo.png" alt="">
+            </div>
+        </div>
+    </section>
+</body>
+</html>
